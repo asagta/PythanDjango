@@ -19,12 +19,24 @@
   font-size:35px;
   font-family: font2;
 }
+li{background-color: transparent;}
+li:hover {
+  background-color: #fa8b4b;
+}
 </style>
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+function bgChange(bg) {
+  bg.style.background = '#fa8b4b';
+}
+function normalChange(bg) {
+	  bg.style.background = '#0e114d';
+	}
+</script>
 </head>
 <div class="container-fluid">
 <div class="row" style="background-color:#F7F7F3">
@@ -36,6 +48,28 @@
     </div>
   </div>
 </div>
-<body>This will be a starting</body>
+<body>
+
+<nav class="navbar navbar-inverse" style="background-color:#0e114d;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" style="margin-left:50%">
+       <li class="list-group-item" onmouseover="bgChange(this)" onmouseout="normalChange(this)" style="margin-left:20px;color:white;cursor: pointer;background-color:#0e114d;border-style: none;">Home</li>
+    <li class="list-group-item" onmouseover="bgChange(this)" onmouseout="normalChange(this)" style="margin-left:20px;background-color:#0e114d;color:white;cursor: pointer;border-style: none;">JAVA</li>
+    <li class="list-group-item" onmouseover="bgChange(this)" onmouseout="normalChange(this)" style="margin-left:20px;background-color:#0e114d;color:white;cursor: pointer;border-style: none;">Python</li>
+    <li class="list-group-item" onmouseover="bgChange(this)" onmouseout="normalChange(this)" style="margin-left:20px;background-color:#0e114d;color:white;cursor: pointer;border-style: none;">Contact</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</body>
 </html>
   
