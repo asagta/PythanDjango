@@ -7,6 +7,10 @@
   font-family: font2;
   src: url({% static "Aclonica.ttf" %});
 }
+@font-face {
+  font-family: font3;
+  src: url({% static "PTS76F.ttf" %});
+}
 .head-1
 {
   margin-left:20px;
@@ -19,9 +23,21 @@
   font-size:35px;
   font-family: font2;
 }
-li{background-color: transparent;}
+.list-grp
+{
+  padding-left:10px;
+  color: black;
+  padding-top:10px;
+  list-style-type:none;
+  font-size:18px;
+  font-family:font3;
+}
+li{background-color:transparent;}
 li:hover {
   background-color: #fa8b4b;
+}
+.list-grp:hover {
+  background-color: #C898B0;
 }
 </style>
  <meta charset="utf-8">
@@ -69,6 +85,34 @@ function normalChange(bg) {
     </div>
   </div>
 </nav>
+<div class="col-sm-3">
+
+ <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+ <div class="collapse navbar-collapse" id="myNavbar2">
+<ul class="list-group" style="background-color:#C9C7C8;">
+  <li class="list-grp" style="border-style: none">First item</li>
+  <li class="list-grp" style="border-style: none;">Second item</li>
+  <li class="list-grp" style="border-style: none;">Third item</li>
+  <li class="list-grp" style="border-style: none;">First item</li>
+  <li class="list-grp" style="border-style: none;">Second item</li>
+  <li class="list-grp" style="border-style: none;">Third item</li>
+  <li class="list-grp" style="border-style: none;">First item</li>
+  <li class="list-grp" style="border-style: none;">Second item</li>
+  <li class="list-grp" style="border-style: none;">Third item</li>
+  <li class="list-grp" style="border-style: none;">First item</li>
+  <li class="list-grp" style="border-style: none;">Second item</li>
+  <li class="list-grp" style="border-style: none;">Third item</li>
+  <li class="list-grp" style="border-style: none;">First item</li>
+  <li class="list-grp" style="border-style: none;">Second item</li>
+  <li class="list-group-item" style="border-style: none;">Third item</li>
+</ul>
+</div>
+</div>
+</div>
 
 </body>
 </html>
