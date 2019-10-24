@@ -51,6 +51,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'EduWeb.urls'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'test.db'),
+    }
+}
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -80,16 +87,7 @@ WSGI_APPLICATION = 'EduWeb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {  
-    'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'eduwebdb',  
-        'USER':'root',  
-        'PASSWORD':'root',  
-        'HOST':'localhost',  
-        'PORT':'3306'  
-    }  
-}  
+
 
 
 # Password validation
