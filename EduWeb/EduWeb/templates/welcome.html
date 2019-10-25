@@ -36,6 +36,7 @@ li{background-color:transparent;}
 li:hover {
   background-color: #fa8b4b;
 }
+img{src: url({% static "arrow.png" %});}
 .list-grp:hover {
   background-color: #C898B0;
 }
@@ -115,7 +116,7 @@ function normalChange(bg) {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar2">
       <ul class="list-group" style="background-color:#C9C7C8;">
-         <li class="list-grp" style="border-style: none">First item</li>
+  <span><img src={% static "arrow.png" %}></img></span> <li class="list-grp" style="border-style: none">First item</li>
   <li class="list-grp" style="border-style: none;">Second item</li>
   <li class="list-grp" style="border-style: none;">Third item</li>
   <li class="list-grp" style="border-style: none;">First item</li>
