@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<style>
+@font-face {
+  font-family: font-robo;
+  src: url({% static "Roboto-Bold.ttf" %});
+}
+h2
+{
+  background-color: #F1F7A7;
+  color: black;
+  font-size:32px;
+  font-family: font-robo;
+}
+p
+{
+ color: black;
+  font-size:18px;
+  font-family: sans-serif;
+  padding-top:15px;
+}
+</style>
+</head>
+
+<body ng-app="myApp" style="overflow:auto">
+<h2><span class="glyphicon glyphicon-arrow-right" style="color:blue">&nbsp;</span>Selenium using Java</h2>
+<p>
+Selenium can be used using Java language. Basically we just  need to import selenium classes and webdriver in our IDE(Eclipse,IntelliJ etc). There are some classes defined in those selenium frameworks which helps us to gain a full control on any webBrowser namely Mozilla,Chrome,Edge and even Internet Explorer.
+</p><br><br>
+<h2><span class="glyphicon glyphicon-arrow-right" style="color:blue">&nbsp;</span>Setup in Ecllipse IDE</h2>
+<p>Now let us look how create a basic Selenium Project in an ecllipse IDE.<br><br>
+<img src={% static "images/sel_setup_files/image001.png" %}></img>
+<p><strong>Create a new project as mentioned in Screenshot</strong></p><br>
+<img src={% static "images/sel_setup_files/image003.png" %}></img>
+<p><strong>Select Java Project and Click Next</strong></p><br>
+<img src={% static "images/sel_setup_files/image005.png" %}></img>
+<p><strong>Write a suitable name for your project and click next</strong></p><br>
+<img src={% static "images/sel_setup_files/image007.png" %}></img>
+<p><strong>Now, here comes the significant part. Go on libraries and add which Selenium Library you want to add. I am using Selenium 3.4 library</strong></p><br>
+<img src={% static "images/sel_setup_files/image009.png" %}></img>
+<p><strong>Click on Finish and bang!! You are ready to go and control the browsers</strong></p><br>
+<br><br>
+</body>
+</html>

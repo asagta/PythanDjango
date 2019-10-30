@@ -20,4 +20,5 @@ def getUsers(request):
 def htmlhello(request):
    users=getUsers(request) 
    return render(request, "welcome.html", {'users': users})def htmlSel(request):
-   return render(request, "sel.html", {})
+   return render(request, "sel.html", {})def htmlSelSetup(request):
+   return render(request, "sel_setup.html", {})

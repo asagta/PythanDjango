@@ -112,7 +112,7 @@ function normalChange(bg) {
       <ul class="list-group" style="background-color:#C9C7C8;">
   <li class="list-header" style="border-style: none"><a href="#!sel">Selenium</a></li>
   <li class="list-grp" style="border-style: none;"><a href="#!sel" style="color:black;">What is Selenium?</a></li>
-  <li class="list-grp" style="border-style: none;">Third item</li>
+  <li class="list-grp" style="border-style: none;"><a href="#!sel_setup" style="color:black;">Selenium using Java</a></li>
   <li class="list-grp" style="border-style: none;">First item</li>
   <li class="list-grp" style="border-style: none;">Second item</li>
   <li class="list-grp" style="border-style: none;">Third item</li>
@@ -141,11 +141,11 @@ app.config(function($routeProvider) {
         templateUrl : "sel.html",
     })
     .when("/sel", {
-        templateUrl : "<h1>Banana</h1><p>Bananas contain around 75% water.</p>"
+        templateUrl : "sel.html"
         
     })
-    .when("/defects", {
-        templateUrl : "defects.jsp"
+    .when("/sel_setup", {
+        templateUrl : "sel_setup.html"
     })
     .when("/enhancement", {
         templateUrl : "enhancements.jsp"            
