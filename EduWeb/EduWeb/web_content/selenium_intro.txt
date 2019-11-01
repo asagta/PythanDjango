@@ -1,0 +1,11 @@
+What is Selenium?
+Selenium is a portable framework for testing web applications. Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. The tests can then run against most modern web browsers. Selenium runs on Windows, Linux, and macOS. It is open-source software released under the Apache License 2.0.
+
+Selenium was originally helmed by Jason Huggins in 2004 as an internal tool at ThoughtWorks. Huggins was later joined by other programmers and testers at ThoughtWorks, before Paul Hammant joined the team and steered the development of the second mode of operation that would later become "Selenium Remote Control" (RC). The tool was open sourced that year.
+
+Selenium can be used to automate functional tests and can be integrated with automation test tools such as <strong>Maven</strong>,<strong> Jenkins</strong>, & <strong>Docker</strong> to achieve continuous testing. It can also be integrated with tools such as TestNG, & JUnit for managing test cases and generating reports.
+
+AUTOMATED TESTING
+In software testing, test automation is the use of software separate from the software being tested to control the execution of tests and the comparison of actual outcomes with predicted outcomes. Test automation can automate some repetitive but necessary tasks in a formalized testing process already in place, or perform additional testing that would be difficult to do manually. Test automation is critical for continuous delivery and continuous testing.
+
+In these set of tutorials we are going the discuss about how to use Selenium using Java and will try some interesting examples. This going to help all the testing aspirants as in future automation will be necessary for doing tasks that are repetitive in nature.

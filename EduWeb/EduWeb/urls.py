@@ -20,4 +20,7 @@ from HtmlViews import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('welcome/', views.htmlhello),
+    path('welcome/sel.html', views.htmlSel),
+    path('welcome/sel_setup.html', views.htmlSelSetup),
+    path('welcome/sel_driver.html', views.htmlSelDriver),
 ]

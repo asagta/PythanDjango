@@ -26,12 +26,23 @@
 .list-grp
 {
   padding-left:10px;
+  margin-left:10px;
   color: black;
   padding-top:10px;
   list-style-type:none;
-  font-size:18px;
+  font-size:120%;
   font-family:font3;
 }
+.list-header
+{
+  font-weight:bold;
+  color: black;
+  padding-top:10px;
+  list-style-type:none;
+  font-size:250%;
+  font-family:font3;
+}
+a{color:black;}
 li{background-color:transparent;}
 li:hover {
   background-color: #fa8b4b;
@@ -46,6 +57,9 @@ img{src: url({% static "arrow.png" %});}
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  
   <script>
 function bgChange(bg) {
   bg.style.background = '#fa8b4b';
@@ -65,7 +79,7 @@ function normalChange(bg) {
     </div>
   </div>
 </div>
-<body>
+<body ng-app="myApp">
 
 <nav class="navbar navbar-inverse" style="background-color:#0e114d;">
   <div class="container-fluid">
@@ -86,40 +100,20 @@ function normalChange(bg) {
     </div>
   </div>
 </nav>
-<!-- <div style="margin-top:-10px;max-width:20%">
-<ul class="list-group" style="background-color:#C9C7C8;">
-  <li class="list-grp" style="border-style: none">First item</li>
-  <li class="list-grp" style="border-style: none;">Second item</li>
-  <li class="list-grp" style="border-style: none;">Third item</li>
-  <li class="list-grp" style="border-style: none;">First item</li>
-  <li class="list-grp" style="border-style: none;">Second item</li>
-  <li class="list-grp" style="border-style: none;">Third item</li>
-  <li class="list-grp" style="border-style: none;">First item</li>
-  <li class="list-grp" style="border-style: none;">Second item</li>
-  <li class="list-grp" style="border-style: none;">Third item</li>
-  <li class="list-grp" style="border-style: none;">First item</li>
-  <li class="list-grp" style="border-style: none;">Second item</li>
-  <li class="list-grp" style="border-style: none;">Third item</li>
-  <li class="list-grp" style="border-style: none;">First item</li>
-  <li class="list-grp" style="border-style: none;">Second item</li>
-  <li class="list-group-item" style="border-style: none;">Third item</li>
-</ul>
-</div> -->
 
-<div style="margin-top:-10px;max-width:20%;">
-<nav class="navbar navbar-inverse"  style="background-color:#C9C7C8;border-style: none">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-2">
+<nav class="navbar navbar-inverse"  style="background-color:#C9C7C8;border-style: none"> 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
         <span class="glyphicon glyphicon-home" style="height:100%;width:100%"></span>                      
       </button>
-    </div>
     <div class="collapse navbar-collapse" id="myNavbar2">
       <ul class="list-group" style="background-color:#C9C7C8;">
-  <span><img src={% static "arrow.png" %}></img></span> <li class="list-grp" style="border-style: none">First item</li>
-  <li class="list-grp" style="border-style: none;">Second item</li>
-  <li class="list-grp" style="border-style: none;">Third item</li>
-  <li class="list-grp" style="border-style: none;">First item</li>
+  <li class="list-header" style="border-style: none"><a href="#!sel">Selenium</a></li>
+  <li class="list-grp" style="border-style: none;"><a href="#!sel" style="color:black;">What is Selenium?</a></li>
+  <li class="list-grp" style="border-style: none;"><a href="#!sel_setup" style="color:black;">Selenium using Java</a></li>
+  <li class="list-grp" style="border-style: none;"><a href="#!sel_driver" style="color:black;">Selenium Webdriver</a></li>
   <li class="list-grp" style="border-style: none;">Second item</li>
   <li class="list-grp" style="border-style: none;">Third item</li>
   <li class="list-grp" style="border-style: none;">First item</li>
@@ -133,12 +127,32 @@ function normalChange(bg) {
   <li class="list-group-item" style="border-style: none;">Third item</li>
       </ul>
     </div>
+  </nav>
   </div>
-</nav>
+  <div class="col-sm-7"><div ng-view></div></div>
 </div>
-{% for user in users %}
-        <span>{{user}}</span>
-{% endfor %}
+</div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "sel.html",
+    })
+    .when("/sel", {
+        templateUrl : "sel.html"
+        
+    })
+    .when("/sel_setup", {
+        templateUrl : "sel_setup.html"
+    })
+    .when("/sel_driver", {
+        templateUrl : "sel_driver.html"            
+    });
+});
+</script>
+
 </body>
 </html>
   
