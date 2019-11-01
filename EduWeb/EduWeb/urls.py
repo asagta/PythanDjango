@@ -22,4 +22,5 @@ urlpatterns = [
     path('welcome/', views.htmlhello),
     path('welcome/sel.html', views.htmlSel),
     path('welcome/sel_setup.html', views.htmlSelSetup),
+    path('welcome/sel_driver.html', views.htmlSelDriver),
 ]

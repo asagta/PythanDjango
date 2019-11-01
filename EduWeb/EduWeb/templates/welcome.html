@@ -113,7 +113,7 @@ function normalChange(bg) {
   <li class="list-header" style="border-style: none"><a href="#!sel">Selenium</a></li>
   <li class="list-grp" style="border-style: none;"><a href="#!sel" style="color:black;">What is Selenium?</a></li>
   <li class="list-grp" style="border-style: none;"><a href="#!sel_setup" style="color:black;">Selenium using Java</a></li>
-  <li class="list-grp" style="border-style: none;">First item</li>
+  <li class="list-grp" style="border-style: none;"><a href="#!sel_driver" style="color:black;">Selenium Webdriver</a></li>
   <li class="list-grp" style="border-style: none;">Second item</li>
   <li class="list-grp" style="border-style: none;">Third item</li>
   <li class="list-grp" style="border-style: none;">First item</li>
@@ -147,8 +147,8 @@ app.config(function($routeProvider) {
     .when("/sel_setup", {
         templateUrl : "sel_setup.html"
     })
-    .when("/enhancement", {
-        templateUrl : "enhancements.jsp"            
+    .when("/sel_driver", {
+        templateUrl : "sel_driver.html"            
     });
 });
 </script>
