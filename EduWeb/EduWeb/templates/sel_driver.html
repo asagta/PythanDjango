@@ -5,6 +5,7 @@
 <meta charset="ISO-8859-1">
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -63,5 +64,130 @@ Java,C#,Python,Ruby,Perl,PHP and Javascript(Node JS).
 
 </p>
 <br><br>
+=======
+  <link href={% static "css/des_page.css" %} rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script>
+
+	  var str = document.getElementById("code_bl").innerHTML; 
+	  console.log("Before str was:\n"+str);
+	  var res = str.split(";");
+	  var res2="<br>";
+	  console.log("the function is called");
+	  console.log("After str is:\n"+res)
+	  for(var i=0;i<res.length;i++)
+		  {
+            res2=res2+res[i]+";<br>";		  
+		  }
+	  document.getElementById("code_bl").innerHTML = res2;
+	
+</script>
+<style>
+@font-face {
+  font-family: font-robo;
+  src: url({% static "Roboto-Bold.ttf" %});
+}
+h2
+{
+  background-color: #F1F7A7;
+  color: black;
+  font-size:32px;
+  font-family: font-robo;
+}
+p
+{
+ color: black;
+  font-size:18px;
+  font-family: sans-serif;
+  padding-top:15px;
+}
+</style>
+</head>
+
+<body ng-app="myApp" style="overflow:auto" >
+<h2><span class="glyphicon glyphicon-arrow-right" style="color:blue">&nbsp;</span>Selenium Webdriver</h2>
+<p>
+WebDriver is designed to provide a simpler, more concise programming interface in addition to addressing some limitations in the Selenium-RC API. Selenium-WebDriver was developed to better support dynamic web pages where elements of a page may change without the page itself being reloaded. WebDriver’s goal is to supply a well-designed object-oriented API that provides improved support for modern advanced web-app testing problems.
+</p><br><br>
+<h2><span class="glyphicon glyphicon-arrow-right" style="color:blue">&nbsp;</span>How it Drives Web?</h2>
+<p>Selenium-WebDriver makes direct calls to the browser using each browser’s native 
+
+support for automation. How these direct calls are made, and the features they 
+
+support depends on the browser you are using. Information on each ‘browser driver’ 
+
+is provided later in this chapter.
+For those familiar with Selenium-RC, this is quite different from what you are used 
+
+to. Selenium-RC worked the same way for each supported browser. It ‘injected’ 
+
+javascript functions into the browser when the browser was loaded and then used its 
+
+javascript to drive the AUT within the browser. WebDriver does not use this 
+
+technique. Again, it drives the browser directly using the browser’s built in 
+
+support for automation.
+
+Webdriver can be used in associations with different languages like 
+
+Java,C#,Python,Ruby,Perl,PHP and Javascript(Node JS).
+
+</p>
+<br><br>
+<div style="overflow-x:scroll">
+<pre class="code_block">
+<code class="javascript">
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+public class Selenium2Example  {
+    public static void main(String[] args) {
+        // Create a new instance of the Firefox driver
+        // Notice that the remainder of the code relies on the interface
+        // not the implementation.
+        WebDriver driver = new FirefoxDriver();
+
+        // And now use this to visit Google
+        driver.get("http://www.google.com");
+        // Alternatively the same thing can be done like this
+        // driver.navigate().to("http://www.google.com")
+
+        // Find the text input element by its name
+        WebElement element = driver.findElement(By.name("q"));
+
+        // Enter something to search for
+        element.sendKeys("Cheese!");
+
+        // Now submit the form. WebDriver will find the form for us from the element
+        element.submit();
+        // Check the title of the page
+        System.out.println("Page title is: " + driver.getTitle());
+        
+        // Google's search is rendered dynamically with JavaScript.
+        // Wait for the page to load, timeout after 10 seconds
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return d.getTitle().toLowerCase().startsWith("cheese!");
+            }
+        });
+
+        // Should see: "cheese! - Google Search"
+        System.out.println("Page title is: " + driver.getTitle());
+        
+        //Close the browser
+        driver.quit();
+    }
+}
+</code> 
+</pre>
+</div>
 </body>
 </html>
