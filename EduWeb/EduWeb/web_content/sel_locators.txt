@@ -1,0 +1,42 @@
+Why Locators?
+It tells Selenium IDE which GUI elements ( say Text Box, Buttons, Check Boxes etc) its needs to operate on.  Identification of correct GUI elements is a prerequisite to creating an automation script. But accurate identification of GUI elements is more difficult than it sounds. Let us see some locators used commonly in Selenium.
+<Link which will take us to the mentioned Divs>
+Id Locator
+Name Locator
+Identifier Locator
+Link Locator
+DOM Locator
+XPath Locator
+
+ID locator:
+Ids are the most preferred way to locate elements on a page, as each id is supposed to be unique which makes it a very faster and reliable way to locate elements.
+
+With this strategy, the first element with the id attribute value matching the location will be returned. If no element has a matching id attribute, a NoSuchElementException will be raised.Let us see a code and try to find it using ID locator
+<form name="loginForm">Login 
+ 
+ Username: <input id="uname" type="text" name="login" />
+ 
+ Password: <input id="pwd" type="password" name="password" />
+ 
+ <input type="submit" name="signin" value="SignIn" /></form>
+
+As here it is quite clear that for locating a InputBox we will use the input having id="uname". Syntax followed would be-
+
+WebElement elementUsername = driver.findElement(By.id("username"));
+WebElement elementPassword = driver.findElement(By.id("password"));
+
+Name Locator
+This is also an efficient way to locate an element  with name attribute, after Ids give it your second preference but likewise Ids, name attributes don’t have to be unique in a page.
+
+With this strategy, the first element with the name attribute value matching the location will be returned. If no element has a matching name attribute, a  NoSuchElementException will be raised.
+
+Example: Let’s take the above example:
+
+You can easily choose the element with the help of Name locator from the above example:
+name = “login”
+name = “password”
+Use the same in your Selenium test script as well:
+WebElement elementUsername = driver.findElement(By.name("login"));
+WebElement elementPassword = driver.findElement(By.name("password"));
+
+
