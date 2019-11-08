@@ -6,6 +6,7 @@
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href={% static "css/des_page.css" %} rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
@@ -30,40 +31,6 @@ p
   padding-top:15px;
 }
 </style>
-</head>
-
-<body ng-app="myApp" style="overflow:auto">
-<h2><span class="glyphicon glyphicon-arrow-right" style="color:blue">&nbsp;</span>Selenium Webdriver</h2>
-<p>
-WebDriver is designed to provide a simpler, more concise programming interface in addition to addressing some limitations in the Selenium-RC API. Selenium-WebDriver was developed to better support dynamic web pages where elements of a page may change without the page itself being reloaded. WebDriver’s goal is to supply a well-designed object-oriented API that provides improved support for modern advanced web-app testing problems.
-</p><br><br>
-<h2><span class="glyphicon glyphicon-arrow-right" style="color:blue">&nbsp;</span>How it Drives Web?</h2>
-<p>Selenium-WebDriver makes direct calls to the browser using each browser’s native 
-
-support for automation. How these direct calls are made, and the features they 
-
-support depends on the browser you are using. Information on each ‘browser driver’ 
-
-is provided later in this chapter.
-For those familiar with Selenium-RC, this is quite different from what you are used 
-
-to. Selenium-RC worked the same way for each supported browser. It ‘injected’ 
-
-javascript functions into the browser when the browser was loaded and then used its 
-
-javascript to drive the AUT within the browser. WebDriver does not use this 
-
-technique. Again, it drives the browser directly using the browser’s built in 
-
-support for automation.
-
-Webdriver can be used in associations with different languages like 
-
-Java,C#,Python,Ruby,Perl,PHP and Javascript(Node JS).
-
-</p>
-<br><br>
-=======
   <link href={% static "css/des_page.css" %} rel="stylesheet" type="text/css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -105,10 +72,20 @@ p
   padding-top:15px;
 }
 </style>
+<link href={% static "css/des_page.css" %} rel="stylesheet" type="text/css">
 </head>
 
 <body ng-app="myApp" style="overflow:auto" >
+<link href={% static "css/des_page.css" %} rel="stylesheet" type="text/css">
 <h2><span class="glyphicon glyphicon-arrow-right" style="color:blue">&nbsp;</span>Why Locators?</h2>
-
+<p>{{locs.0}}</p>
+ <ol>
+         <li class='list-grp1'>Id Locator</li>
+         <li class='list-grp1'>Name Locator</li>
+         <li class='list-grp1'>Identifier Locator</li>
+         <li class='list-grp1'>Link Locator</li>
+         <li class='list-grp1'>DOM Locator</li>
+         <li class='list-grp1'>XPath Locator</li>
+ </ol>
 </body>
 </html>
