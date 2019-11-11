@@ -3,9 +3,7 @@ It tells Selenium IDE which GUI elements ( say Text Box, Buttons, Check Boxes et
 <Link which will take us to the mentioned Divs>
 Id Locator
 Name Locator
-Identifier Locator
-Link Locator
-DOM Locator
+CSS Locator
 XPath Locator
 
 ID locator:
@@ -39,4 +37,47 @@ Use the same in your Selenium test script as well:
 WebElement elementUsername = driver.findElement(By.name("login"));
 WebElement elementPassword = driver.findElement(By.name("password"));
 
+CSS Selector
+When we don't have an option to choose Id or Name, we should prefer using CSS locators as the best alternative.
+CSS is "Cascading Style Sheets" and it is defined to display HTML in structured and colorful styles are applied to webpage.
+<list items>
+CSS has more Advantage than Xpath
+CSS is much more faster and simpler than the Xpath.
+In IE Xpath works very slow, where as Css works faster when compared to Xpath.
+Syntax:
+tagName[attributename=attributeValue]
+Example 1: input[id=email]
+Example 2: input[name=email][type=text]
+
+In CSS there are two special characters which has important role to play.
+1. dot(.) refers to class.
+For e.g.
+<button class="submitbtn" id="sub" type="submit" style="background-color: rgb(85, 172, 238);">
+ Log in
+ </button>
+The Webdriver locator here would be
+WebElement ele3 = driver.findElement(By.cssSelector(".submitbtn"));
+2.Hash(#) refers to Id
+Now looking at above example the webdriver locator used would be 
+WebElement Email = driver.findElement(By.cssSelector("input[id=sub]"));
+
+This way the CSS selector works. Also in further sections when we will study about Selenium frameworks we will also see how this CSS Selector can be generated through some java Scripts.
+
+XPATH LOCATORS
+XPath is the language used when locating XML (Extensible Markup Language) nodes. Since HTML can be thought of as an implementation of XML, we can also use XPath in locating HTML elements.
+
+        Advantage: It can access almost any element, even those without class, name, or id attributes.
+
+        Disadvantage: It is the most complicated method of identifying elements because of too many different rules and considerations.
+Syntax:
+Xpath=//tagname[@attribute='value']
+// : Select current node.
+Tagname: Tagname of the particular node.
+@: Select attribute.
+Attribute: Attribute name of the node.
+Value: Value of the attribute.
+
+For Above example the xpath would be
+Relative xpath: //*[@class='submit-btn']//*[@id='sub']
+This is relative xpath. This is a basic way to find a Xpath. We have discussed in detail that what is Xpath and how to find that in this link.
 
