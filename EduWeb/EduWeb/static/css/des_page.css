@@ -41,7 +41,7 @@ overflow-x:scroll;
   color: black;
   padding-top:5px;
   list-style-type:none;
-  font-size:15px;
+  font-size:19px;
   font-weight:bold;
 }
 .list-header
@@ -54,7 +54,7 @@ overflow-x:scroll;
   font-family:font3;
 }
 a{color:black;}
-li{background-color:transparent;}
+
 img{src: url({% static "arrow.png" %});}
 .list-grp:hover {
   background-color: #C898B0;
